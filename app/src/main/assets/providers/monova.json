@@ -1,0 +1,10 @@
+{
+  "name": "monova",
+  "baseUrl": "https://monova.org",
+  "searchUrl": "https://monova.org/search?term={query}",
+  "listSelector": "div.search-list div.item",
+  "fields": {
+    "title": { "selector": "a", "attr": "text" },
+    "detailUrl": { "selector": "a", "attr": "href" }
+  }
+}

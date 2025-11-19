@@ -1,0 +1,10 @@
+{
+  "name": "nyaa",
+  "baseUrl": "https://nyaa.si",
+  "searchUrl": "https://nyaa.si/?f=0&c=0_0&q={query}",
+  "listSelector": "table.torrent-list tr",
+  "fields": {
+    "title": { "selector": "td[colspan] a", "attr": "text" },
+    "detailUrl": { "selector": "td[colspan] a", "attr": "href" }
+  }
+}

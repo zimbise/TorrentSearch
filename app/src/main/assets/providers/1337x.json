@@ -1,0 +1,10 @@
+{
+  "name": "1337x",
+  "baseUrl": "https://1337x.to",
+  "searchUrl": "https://1337x.to/search/{query}/1/",
+  "listSelector": "table.table-list tr",
+  "fields": {
+    "title": { "selector": "td.name a", "attr": "text" },
+    "detailUrl": { "selector": "td.name a", "attr": "href" }
+  }
+}

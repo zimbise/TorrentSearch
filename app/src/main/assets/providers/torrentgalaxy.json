@@ -1,0 +1,10 @@
+{
+  "name": "torrentgalaxy",
+  "baseUrl": "https://torrentgalaxy.to",
+  "searchUrl": "https://torrentgalaxy.to/torrents.php?search={query}",
+  "listSelector": "div.tgxtablerow",
+  "fields": {
+    "title": { "selector": "a[href*='torrent']", "attr": "text" },
+    "detailUrl": { "selector": "a[href*='torrent']", "attr": "href" }
+  }
+}

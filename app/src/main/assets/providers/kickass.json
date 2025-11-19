@@ -1,0 +1,10 @@
+{
+  "name": "kickass",
+  "baseUrl": "https://kickass.sx",
+  "searchUrl": "https://kickass.sx/usearch/{query}/",
+  "listSelector": "table.data tr",
+  "fields": {
+    "title": { "selector": "a.cellMainLink", "attr": "text" },
+    "detailUrl": { "selector": "a.cellMainLink", "attr": "href" }
+  }
+}

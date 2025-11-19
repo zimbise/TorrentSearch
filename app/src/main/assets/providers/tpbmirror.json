@@ -1,0 +1,10 @@
+{
+  "name": "tpbmirror",
+  "baseUrl": "https://thepiratebay.org",
+  "searchUrl": "https://thepiratebay.org/search/{query}/1/99/0",
+  "listSelector": "table#searchResult tr",
+  "fields": {
+    "title": { "selector": "div.detName a", "attr": "text" },
+    "detailUrl": { "selector": "div.detName a", "attr": "href" }
+  }
+}

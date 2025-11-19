@@ -1,0 +1,101 @@
+{
+  "searchUrl": "https://torrentplanet.net/search/{query}",
+  "listSelector": "table.results tr",
+  "fields": {
+    "title": {
+      "selector": "a.title",
+      "attr": "text"
+    },
+    "detailUrl": {
+      "selector": "a.title",
+      "attr": "href"
+    },
+    "seeders": {
+      "selector": "td.seeders",
+      "attr": "text"
+    },
+    "leechers": {
+      "selector": "td.leechers",
+      "attr": "text"
+    },
+    "size": {
+      "selector": "td.size",
+      "attr": "text"
+    }
+  },
+  "enabled": true,
+  "headers": {
+    "User-Agent": "Mozilla/5.0 (Android; Galaxy A32) Aggregator/1.0",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9"
+  },
+  "search": {
+    "path": "/search",
+    "queryParam": "q",
+    "method": "GET",
+    "extraParams": {}
+  },
+  "parse": {
+    "item": {
+      "selector": ".result, .results .row, .search-result, .table tr, li.result, .torrent-row"
+    },
+    "title": {
+      "selector": ".title, .name a, .entry-title, td.name a",
+      "attr": "text"
+    },
+    "link": {
+      "selector": "a[href^=\"magnet:\"], a[href$=\".torrent\"]",
+      "attr": "href"
+    },
+    "guid": {
+      "selector": "",
+      "attr": "text",
+      "fallback": "hashFromMagnet"
+    },
+    "size": {
+      "selector": ".size, td.size",
+      "attr": "text"
+    },
+    "pubDate": {
+      "selector": ".date, .time, td.date",
+      "attr": "text"
+    }
+  },
+  "fallbackPatterns": {
+    "item": [
+      ".result",
+      ".results .row",
+      ".search-result",
+      ".table tr",
+      "li.result",
+      ".torrent-row",
+      ".card",
+      ".content .row"
+    ],
+    "title": [
+      ".title",
+      ".name a",
+      ".entry-title",
+      "td.name a",
+      "h3 a",
+      ".details .name a"
+    ],
+    "link": [
+      "a[href^=\"magnet:\"]",
+      "a[href$=\".torrent\"]",
+      "a.download",
+      ".actions a[href^=\"magnet:\"]"
+    ],
+    "size": [
+      ".size",
+      "td.size",
+      ".meta .size"
+    ],
+    "date": [
+      ".date",
+      ".time",
+      "td.date",
+      ".meta .date"
+    ]
+  }
+}

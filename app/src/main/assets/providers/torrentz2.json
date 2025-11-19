@@ -1,0 +1,10 @@
+{
+  "name": "torrentz2",
+  "baseUrl": "https://torrentz2.nz",
+  "searchUrl": "https://torrentz2.nz/search?f={query}",
+  "listSelector": "div.results div",
+  "fields": {
+    "title": { "selector": "a[href*='/torrent/']", "attr": "text" },
+    "detailUrl": { "selector": "a[href*='/torrent/']", "attr": "href" }
+  }
+}

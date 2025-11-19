@@ -1,0 +1,10 @@
+{
+  "name": "limetorrents",
+  "baseUrl": "https://www.limetorrents.lol",
+  "searchUrl": "https://www.limetorrents.lol/search/all/{query}/",
+  "listSelector": "table.table2 tr",
+  "fields": {
+    "title": { "selector": "td a", "attr": "text" },
+    "detailUrl": { "selector": "td a", "attr": "href" }
+  }
+}

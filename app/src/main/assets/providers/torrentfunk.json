@@ -1,0 +1,10 @@
+{
+  "name": "torrentfunk",
+  "baseUrl": "https://www.torrentfunk.com",
+  "searchUrl": "https://www.torrentfunk.com/all/torrents/{query}.html",
+  "listSelector": "table.torrent-table tr",
+  "fields": {
+    "title": { "selector": "td a", "attr": "text" },
+    "detailUrl": { "selector": "td a", "attr": "href" }
+  }
+}
