@@ -11,7 +11,6 @@ object ProviderManager {
         providers.clear()
         for (i in 0 until arr.length()) {
             val obj = arr.getJSONObject(i)
-            // Force enabled=true by default
             obj.put("enabled", true)
             providers.add(obj)
         }
@@ -25,8 +24,8 @@ object ProviderManager {
         val results = mutableListOf<String>()
         for (provider in getEnabledProviders()) {
             val name = provider.optString("name", "unknown")
-            // Placeholder: integrate actual HTTP search logic here
-            results.add("Searching $name for '$query' ...")
+            val res = ProviderHttpClient.search(provider, query)
+            results.add("[$name] $res")
         }
         return results
     }
