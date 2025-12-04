@@ -1,0 +1,29 @@
+
+*** Legal Notice ***
+qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.
+
+If you have read the legal notice, you can use command line option `--confirm-legal-notice` to suppress this message.
+
+WebUI will be started shortly after internal preparations. Please wait...
+
+******** Information ********
+To control qBittorrent, access the WebUI at: http://localhost:8080
+The WebUI administrator username is: admin
+The WebUI administrator password was not set. A temporary password is provided for this session: RUwmnuYWN
+You should set your own password in program preferences.
+Catching signal: SIGTERM
+Exiting cleanly
+[qBittorrent] Restarting in 5 seconds...
+
+*** Legal Notice ***
+qBittorrent is a file sharing program. When you run a torrent, its data will be made available to others by means of upload. Any content you share is your sole responsibility.
+
+If you have read the legal notice, you can use command line option `--confirm-legal-notice` to suppress this message.
+
+WebUI will be started shortly after internal preparations. Please wait...
+
+******** Information ********
+To control qBittorrent, access the WebUI at: http://localhost:8080
+The WebUI administrator username is: admin
+The WebUI administrator password was not set. A temporary password is provided for this session: RCeKsMMU8
+You should set your own password in program preferences.

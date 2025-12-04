@@ -1,7 +1,6 @@
 package com.prajwalch.torrentsearch.ui.home
 
 import android.os.Build
-
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.focusable
 import androidx.compose.foundation.layout.Arrangement
@@ -147,6 +146,13 @@ fun HomeScreen(
                 enabled = enableSearchButton,
             ) {
                 Text(text = stringResource(R.string.home_button_search))
+            }
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                onClick = { viewModel.syncProviders() },
+            ) {
+                Text(text = "Top Eight Sync")
             }
         }
     }
