@@ -1,5 +1,3 @@
-import kotlinx.coroutines.flow.firstOrNull
-import kotlinx.coroutines.flow.firstOrNull
 package com.prajwalch.torrentsearch.ui.home
 
 import androidx.lifecycle.ViewModel
@@ -16,11 +14,10 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-import kotlin.time.Duration.Companion.seconds
-
 
 data class HomeUiState(
     val histories: List<SearchHistory> = emptyList(),
@@ -42,37 +39,40 @@ class HomeViewModel @Inject constructor(
     private val settingsRepository: SettingsRepository,
     private val repository: Repository,
 ) : ViewModel() {
-    private val selectedCategory = MutableStateFlow(Category.All)
 
+    private val selectedCategory = MutableStateFlow(Category.All)
     private val _syncStatus = MutableStateFlow("")
     val syncStatus: StateFlow<String> = _syncStatus
 
-    val uiState: StateFlow<HomeUiState> = combine(
-        searchHistoryRepository.observeAllSearchHistories(),
-        selectedCategory,
-        settingsRepository.getHomeSettings(),
-        _syncStatus,
-    ) { searchHistories, selectedCategory, settings, syncStatus ->
-        val histories = if (settings.showSearchHistory) searchHistories else emptyList()
+    val uiState: StateFlow<HomeUiState> =
+        combine(
+            searchHistoryRepository.observeAllSearchHistories(),
+            selectedCategory,
+            settingsRepository.getHomeSettings(),
+            _syncStatus,
+        ) { searchHistories, selectedCategory, settings, syncStatus ->
 
-        val categories = Category.entries.filter { settings.enableNSFWMode || !it.isNSFW }
-        val selectedCategory = when {
-            selectedCategory.value in categories -> selectedCategory.value
-            else -> Category.All
-        }
+            val histories =
+                if (settings.showSearchHistory) searchHistories else emptyList()
 
-        HomeUiState(
-            histories = histories,
-            categories = categories,
-            selectedCategory = selectedCategory,
-            searchHistoryEnabled = settings.saveSearchHistory,
-            syncStatus = syncStatus,
+            val categories =
+                Category.entries.filter { settings.enableNSFWMode || !it.isNSFW }
+
+            val resolvedCategory =
+                if (selectedCategory in categories) selectedCategory else Category.All
+
+            HomeUiState(
+                histories = histories,
+                categories = categories,
+                selectedCategory = resolvedCategory,
+                searchHistoryEnabled = settings.saveSearchHistory,
+                syncStatus = syncStatus,
+            )
+        }.stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = HomeUiState(),
         )
-    }.stateIn(
-        scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5000),
-        initialValue = HomeUiState(),
-    )
 
     init {
         loadDefaultCategory()
@@ -80,7 +80,6 @@ class HomeViewModel @Inject constructor(
 
     private fun loadDefaultCategory() = viewModelScope.launch {
         val defaultCategory = settingsRepository.defaultCategory.firstOrNull()
-
         if (defaultCategory != null) {
             selectedCategory.value = defaultCategory
         }
@@ -92,7 +91,7 @@ class HomeViewModel @Inject constructor(
 
     fun deleteSearchHistory(id: SearchHistoryId) {
         viewModelScope.launch {
-            searchHistoryRepository.deleteSearchHistoryById(id = id)
+            searchHistoryRepository.deleteSearchHistoryById(id)
         }
     }
 
@@ -108,12 +107,12 @@ class HomeViewModel @Inject constructor(
             }
         }
     }
-
-    private fun SettingsRepository.getHomeSettings(): Flow<HomeSettings> =
-        combine(
-            this.enableNSFWMode,
-            this.saveSearchHistory,
-            this.showSearchHistory,
-            ::HomeSettings,
-        )
 }
+
+private fun SettingsRepository.getHomeSettings(): Flow<HomeSettings> =
+    combine(
+        this.enableNSFWMode,
+        this.saveSearchHistory,
+        this.showSearchHistory,
+        ::HomeSettings,
+    )
