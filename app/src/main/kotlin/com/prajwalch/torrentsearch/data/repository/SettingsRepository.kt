@@ -38,7 +38,7 @@ class SettingsRepository @Inject constructor(
         .getOrDefault(key = PURE_BLACK, default = false)
 
     val enableNSFWMode: Flow<Boolean> = dataStore
-        .getOrDefault(key = ENABLE_NSFW_MODE, default = false)
+        .getOrDefault(key = ENABLE_NSFW_MODE, default = true)
 
     val enabledSearchProvidersId: Flow<Set<SearchProviderId>> = dataStore
         .getOrDefault(
