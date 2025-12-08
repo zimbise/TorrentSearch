@@ -1,3 +1,5 @@
+import kotlinx.coroutines.flow.firstOrNull
+import kotlinx.coroutines.flow.firstOrNull
 package com.prajwalch.torrentsearch.ui.home
 
 import androidx.lifecycle.ViewModel
@@ -55,7 +57,7 @@ class HomeViewModel @Inject constructor(
 
         val categories = Category.entries.filter { settings.enableNSFWMode || !it.isNSFW }
         val selectedCategory = when {
-            selectedCategory in categories -> selectedCategory
+            selectedCategory.value in categories -> selectedCategory.value
             else -> Category.All
         }
 
@@ -68,7 +70,7 @@ class HomeViewModel @Inject constructor(
         )
     }.stateIn(
         scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5.seconds),
+        started = SharingStarted.WhileSubscribed(5000),
         initialValue = HomeUiState(),
     )
 

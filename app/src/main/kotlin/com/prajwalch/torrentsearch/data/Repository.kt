@@ -1,6 +1,6 @@
 package com.prajwalch.torrentsearch.data
 
-import com.prajwalch.torrentsearch.models.TorznabSearchProvider
+import com.prajwalch.torrentsearch.providers.TorznabSearchProvider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import io.ktor.client.*
