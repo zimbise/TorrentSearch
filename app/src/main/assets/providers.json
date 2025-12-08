@@ -4,7 +4,7 @@
       "id": "prowlarr-local",
       "name": "Prowlarr (Zim)",
       "url": "http://192.168.1.175:9696/1",
-      "apiKey": "REPLACE_PROWLARR_API_KEY",
+      "apiKey": "11e5676f4c3444479cea3671a6c0c55b",
       "category": "All",
       "unsafeReason": null
     },
@@ -12,7 +12,7 @@
       "id": "jackett-local",
       "name": "Jackett (Zim)",
       "url": "http://192.168.1.175:9117/api/v2.0/indexers/all/results/torznab",
-      "apiKey": "REPLACE_JACKETT_API_KEY",
+      "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s",
       "category": "All",
       "unsafeReason": null
     }

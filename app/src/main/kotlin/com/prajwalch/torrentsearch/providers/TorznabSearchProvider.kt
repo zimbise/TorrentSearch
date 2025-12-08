@@ -2,32 +2,27 @@ package com.prajwalch.torrentsearch.providers
 
 import com.prajwalch.torrentsearch.models.Category
 import com.prajwalch.torrentsearch.models.Torrent
+import com.prajwalch.torrentsearch.models.InfoHashOrMagnetUri
 import com.prajwalch.torrentsearch.network.HttpClient
 import com.prajwalch.torrentsearch.extensions.getArray
 import com.prajwalch.torrentsearch.extensions.getObject
 import com.prajwalch.torrentsearch.extensions.getString
-import com.prajwalch.torrentsearch.models.InfoHashOrMagnetUri
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonObject
 
-/** Safety status of a provider. */
 sealed class SearchProviderSafetyStatus {
     object Safe : SearchProviderSafetyStatus()
     data class Unsafe(val reason: String) : SearchProviderSafetyStatus()
 }
 
-/** Type of provider. */
 enum class SearchProviderType {
     Builtin,
     Torznab
 }
 
-/** Unique ID type. */
 typealias SearchProviderId = String
 
-/** Basic info about a provider. */
 data class SearchProviderInfo(
     val id: SearchProviderId,
     val name: String,
@@ -38,7 +33,6 @@ data class SearchProviderInfo(
     val type: SearchProviderType,
 )
 
-/** Torznab provider configuration stored in DB. */
 data class TorznabSearchProviderConfig(
     val id: SearchProviderId,
     val name: String,
@@ -49,13 +43,11 @@ data class TorznabSearchProviderConfig(
     val enabledByDefault: Boolean,
 )
 
-/** Context given to providers when searching. */
 data class SearchContext(
     val category: Category,
     val httpClient: HttpClient,
 )
 
-/** Interface all providers implement. */
 interface SearchProvider {
     val info: SearchProviderInfo
 
@@ -66,9 +58,7 @@ interface SearchProvider {
 }
 
 /**
- * Torznab-based provider implementation.
- *
- * Uses a Torznab-capable backend (Jackett/Prowlarr).
+ * Torznab provider using a Jackett/Prowlarr compatible backend.
  */
 class TorznabSearchProvider(
     private val config: TorznabSearchProviderConfig,
@@ -88,8 +78,6 @@ class TorznabSearchProvider(
         query: String,
         context: SearchContext,
     ): List<Torrent> {
-        // Basic Torznab "simple" query:
-        //   /api?apikey=KEY&t=search&q=query
         val base = config.url.trimEnd('/')
         val url = "$base?apikey=${config.apiKey}&t=search&q=$query"
 
@@ -101,7 +89,7 @@ class TorznabSearchProvider(
         return items.mapNotNull { element ->
             val obj: JsonObject = try {
                 element.jsonObject
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 return@mapNotNull null
             }
 
