@@ -1,1 +1,55 @@
-[]
+{
+  "torznab": [
+    {
+      "id": "jackett-all",
+      "name": "Jackett (All Indexers)",
+      "url": "http://192.168.1.175:9117/api/v2.0/indexers/all/results/torznab",
+      "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s",
+      "category": "All"
+    },
+    {
+      "id": "prowlarr-all",
+      "name": "Prowlarr (All Indexers)",
+      "url": "http://192.168.1.175:9696/1/api/v1/indexers/all/results/torznab",
+      "apiKey": "11e5676f4c3444479cea3671a6c0c55b",
+      "category": "All"
+    },
+    { "id": "0magnet", "name": "0magnet", "url": "http://192.168.1.175:9117/api/v2.0/indexers/0magnet/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "1337x", "name": "1337x", "url": "http://192.168.1.175:9117/api/v2.0/indexers/1337x/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "52bt", "name": "52bt", "url": "http://192.168.1.175:9117/api/v2.0/indexers/52bt/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "acgrip", "name": "acgrip", "url": "http://192.168.1.175:9117/api/v2.0/indexers/acgrip/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "bigfangroup", "name": "bigfangroup", "url": "http://192.168.1.175:9117/api/v2.0/indexers/bigfangroup/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "bitru", "name": "bitru", "url": "http://192.168.1.175:9117/api/v2.0/indexers/bitru/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "extratorrent-st", "name": "extratorrent-st", "url": "http://192.168.1.175:9117/api/v2.0/indexers/extratorrent-st/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "freejavtorrent", "name": "freejavtorrent", "url": "http://192.168.1.175:9117/api/v2.0/indexers/freejavtorrent/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "idope", "name": "idope", "url": "http://192.168.1.175:9117/api/v2.0/indexers/idope/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "isohunt2", "name": "isohunt2", "url": "http://192.168.1.175:9117/api/v2.0/indexers/isohunt2/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "kickasstorrents-to", "name": "kickasstorrents-to", "url": "http://192.168.1.175:9117/api/v2.0/indexers/kickasstorrents-to/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "kickasstorrents-ws", "name": "kickasstorrents-ws", "url": "http://192.168.1.175:9117/api/v2.0/indexers/kickasstorrents-ws/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "knaben", "name": "knaben", "url": "http://192.168.1.175:9117/api/v2.0/indexers/knaben/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "mypornclub", "name": "mypornclub", "url": "http://192.168.1.175:9117/api/v2.0/indexers/mypornclub/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "nortorrent", "name": "nortorrent", "url": "http://192.168.1.175:9117/api/v2.0/indexers/nortorrent/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "onejav", "name": "onejav", "url": "http://192.168.1.175:9117/api/v2.0/indexers/onejav/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "opensharing", "name": "opensharing", "url": "http://192.168.1.175:9117/api/v2.0/indexers/opensharing/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "pornotorrent", "name": "pornotorrent", "url": "http://192.168.1.175:9117/api/v2.0/indexers/pornotorrent/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "pornrips", "name": "pornrips", "url": "http://192.168.1.175:9117/api/v2.0/indexers/pornrips/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "rintornet", "name": "rintornet", "url": "http://192.168.1.175:9117/api/v2.0/indexers/rintornet/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "rutracker-ru", "name": "rutracker-ru", "url": "http://192.168.1.175:9117/api/v2.0/indexers/rutracker-ru/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "sosulki", "name": "sosulki", "url": "http://192.168.1.175:9117/api/v2.0/indexers/sosulki/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "sukebeinyaasi", "name": "sukebeinyaasi", "url": "http://192.168.1.175:9117/api/v2.0/indexers/sukebeinyaasi/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "thepiratebay", "name": "thepiratebay", "url": "http://192.168.1.175:9117/api/v2.0/indexers/thepiratebay/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "therarbg", "name": "therarbg", "url": "http://192.168.1.175:9117/api/v2.0/indexers/therarbg/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "tokyotosho", "name": "tokyotosho", "url": "http://192.168.1.175:9117/api/v2.0/indexers/tokyotosho/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "torrentcore", "name": "torrentcore", "url": "http://192.168.1.175:9117/api/v2.0/indexers/torrentcore/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "torrent-pirat", "name": "torrent-pirat", "url": "http://192.168.1.175:9117/api/v2.0/indexers/torrent-pirat/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "torrentdownload", "name": "torrentdownload", "url": "http://192.168.1.175:9117/api/v2.0/indexers/torrentdownload/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "torrentgalaxyclone", "name": "torrentgalaxyclone", "url": "http://192.168.1.175:9117/api/v2.0/indexers/torrentgalaxyclone/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "torrentqq", "name": "torrentqq", "url": "http://192.168.1.175:9117/api/v2.0/indexers/torrentqq/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "traht", "name": "traht", "url": "http://192.168.1.175:9117/api/v2.0/indexers/traht/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "u3c3", "name": "u3c3", "url": "http://192.168.1.175:9117/api/v2.0/indexers/u3c3/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "uindex", "name": "uindex", "url": "http://192.168.1.175:9117/api/v2.0/indexers/uindex/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "xxxclub", "name": "xxxclub", "url": "http://192.168.1.175:9117/api/v2.0/indexers/xxxclub/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "xxxtor", "name": "xxxtor", "url": "http://192.168.1.175:9117/api/v2.0/indexers/xxxtor/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" },
+    { "id": "zktorrent", "name": "zktorrent", "url": "http://192.168.1.175:9117/api/v2.0/indexers/zktorrent/results/torznab", "apiKey": "sfbizvj42r5h41a2aojb2t29zougqd3s", "category": "All" }
+  ]
+}
