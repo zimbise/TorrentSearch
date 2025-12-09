@@ -3,12 +3,12 @@ package com.prajwalch.torrentsearch.providers
 import com.prajwalch.torrentsearch.models.Category
 import com.prajwalch.torrentsearch.models.Torrent
 
-class ThePirateBay : SearchProvider {
+class RuTrackerRu : SearchProvider {
 
     override val info = SearchProviderInfo(
-        id = "thepiratebay",
-        name = "thepiratebay",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/thepiratebay/results/torznab",
+        id = "rutracker-ru",
+        name = "rutracker-ru",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/rutracker-ru/results/torznab",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,
