@@ -12,6 +12,12 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TorznabSearchProviderDao {
+    @Query("DELETE FROM torznab_search_providers")
+    suspend fun deleteAll()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(providers: List<TorznabSearchProviderEntity>)
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(searchProvider: TorznabSearchProviderEntity)
 

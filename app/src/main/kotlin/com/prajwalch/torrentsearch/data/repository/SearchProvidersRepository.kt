@@ -135,3 +135,22 @@ class SearchProvidersRepository @Inject constructor(
         dao.deleteById(id = id)
     }
 }
+suspend fun reseedFromRegistry() {
+    dao.deleteAll()
+
+    val entities = ProviderRegistry.allProviders.map { provider ->
+        TorznabSearchProviderEntity(
+            id = provider.info.id,
+            name = provider.info.name,
+            url = provider.info.url,
+            apiKey = "",
+            category = provider.info.specializedCategory.name,
+            unsafeReason = when (provider.info.safetyStatus) {
+                is SearchProviderSafetyStatus.Safe -> null
+                is SearchProviderSafetyStatus.Unsafe -> provider.info.safetyStatus.reason
+            }
+        )
+    }
+
+    dao.insertAll(entities)
+}

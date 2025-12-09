@@ -1,4 +1,4 @@
-package com.prajwalch.torrentsearch.data.local.entities
+9package com.prajwalch.torrentsearch.data.local.entities
 
 import androidx.room.Entity
 import androidx.room.Index
