@@ -8,7 +8,7 @@ class ProwlarrAll : SearchProvider {
     override val info = SearchProviderInfo(
         id = "prowlarr-all",
         name = "Prowlarr (All Indexers)",
-        url = "http://192.168.1.175:9696/1/api/v1/indexers/all/results/torznab",
+        url = "http://192.168.1.175:9696/1/api/v1/indexers/all/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,
