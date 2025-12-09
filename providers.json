@@ -13,7 +13,7 @@
       "url": "http://192.168.1.175:9696/1/api/v1/indexers/all/results/torznab",
       "apiKey": "11e5676f4c3444479cea3671a6c0c55b",
       "category": "All"
-    },
-    ...
+    }
+    # ... add all other providers here ...
   ]
 }
