@@ -22,8 +22,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      # NUCLEAR: NO GRADLE CACHE AT ALL
-      # This forces a clean KSP + Room rebuild every time.
+      # FINAL NUCLEAR FIX: DELETE ALL GRADLE CACHES
+      - name: Purge Gradle caches
+        run: rm -rf ~/.gradle
 
       - name: Build Debug APK
         run: ./gradlew --no-build-cache --rerun-tasks clean assembleDebug
