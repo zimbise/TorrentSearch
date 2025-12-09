@@ -8,7 +8,7 @@ class SukebeinYaasi : SearchProvider {
     override val info = SearchProviderInfo(
         id = "sukebeinyaasi",
         name = "sukebeinyaasi",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/sukebeinyaasi/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/sukebeinyaasi/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

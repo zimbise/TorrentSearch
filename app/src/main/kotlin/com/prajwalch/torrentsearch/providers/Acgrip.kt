@@ -8,7 +8,7 @@ class Acgrip : SearchProvider {
     override val info = SearchProviderInfo(
         id = "acgrip",
         name = "acgrip",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/acgrip/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/acgrip/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

@@ -8,7 +8,7 @@ class ThePirateBay : SearchProvider {
     override val info = SearchProviderInfo(
         id = "thepiratebay",
         name = "thepiratebay",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/thepiratebay/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/thepiratebay/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

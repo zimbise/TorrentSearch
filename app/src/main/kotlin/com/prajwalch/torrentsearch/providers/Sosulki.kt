@@ -8,7 +8,7 @@ class Sosulki : SearchProvider {
     override val info = SearchProviderInfo(
         id = "sosulki",
         name = "sosulki",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/sosulki/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/sosulki/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

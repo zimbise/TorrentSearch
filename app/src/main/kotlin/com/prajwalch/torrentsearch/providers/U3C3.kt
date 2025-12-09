@@ -8,7 +8,7 @@ class U3C3 : SearchProvider {
     override val info = SearchProviderInfo(
         id = "u3c3",
         name = "u3c3",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/u3c3/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/u3c3/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

@@ -8,7 +8,7 @@ class ZeroMagnet : SearchProvider {
     override val info = SearchProviderInfo(
         id = "0magnet",
         name = "0magnet",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/0magnet/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/0magnet/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

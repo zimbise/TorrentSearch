@@ -8,7 +8,7 @@ class TorrentDownload : SearchProvider {
     override val info = SearchProviderInfo(
         id = "torrentdownload",
         name = "torrentdownload",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/torrentdownload/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/torrentdownload/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

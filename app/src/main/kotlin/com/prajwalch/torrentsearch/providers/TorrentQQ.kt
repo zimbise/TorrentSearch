@@ -8,7 +8,7 @@ class TorrentQQ : SearchProvider {
     override val info = SearchProviderInfo(
         id = "torrentqq",
         name = "torrentqq",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/torrentqq/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/torrentqq/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

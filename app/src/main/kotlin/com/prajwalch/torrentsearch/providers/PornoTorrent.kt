@@ -8,7 +8,7 @@ class PornoTorrent : SearchProvider {
     override val info = SearchProviderInfo(
         id = "pornotorrent",
         name = "pornotorrent",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/pornotorrent/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/pornotorrent/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

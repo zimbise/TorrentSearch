@@ -8,7 +8,7 @@ class BigFanGroup : SearchProvider {
     override val info = SearchProviderInfo(
         id = "bigfangroup",
         name = "bigfangroup",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/bigfangroup/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/bigfangroup/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

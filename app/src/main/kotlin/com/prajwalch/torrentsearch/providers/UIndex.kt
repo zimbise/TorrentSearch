@@ -8,7 +8,7 @@ class UIndex : SearchProvider {
     override val info = SearchProviderInfo(
         id = "uindex",
         name = "uindex",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/uindex/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/uindex/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

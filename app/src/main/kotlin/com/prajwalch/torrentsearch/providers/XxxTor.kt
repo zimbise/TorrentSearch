@@ -8,7 +8,7 @@ class XxxTor : SearchProvider {
     override val info = SearchProviderInfo(
         id = "xxxtor",
         name = "xxxtor",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/xxxtor/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/xxxtor/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

@@ -8,7 +8,7 @@ class FiftyTwoBt : SearchProvider {
     override val info = SearchProviderInfo(
         id = "52bt",
         name = "52bt",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/52bt/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/52bt/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

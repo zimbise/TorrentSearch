@@ -8,7 +8,7 @@ class IsoHunt2 : SearchProvider {
     override val info = SearchProviderInfo(
         id = "isohunt2",
         name = "isohunt2",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/isohunt2/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/isohunt2/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,

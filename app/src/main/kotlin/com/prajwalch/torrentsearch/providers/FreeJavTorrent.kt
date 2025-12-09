@@ -8,7 +8,7 @@ class FreeJavTorrent : SearchProvider {
     override val info = SearchProviderInfo(
         id = "freejavtorrent",
         name = "freejavtorrent",
-        url = "http://192.168.1.175:9117/api/v2.0/indexers/freejavtorrent/results/torznab",
+        url = "http://192.168.1.175:9117/api/v2.0/indexers/freejavtorrent/results/torznab/",
         specializedCategory = Category.All,
         safetyStatus = SearchProviderSafetyStatus.Safe,
         enabledByDefault = true,
